@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,46 +9,138 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css">
 </head>
-<body>
 
-<div class="slider-section container-fluid">
-  <div id="sliderContent">
-    <img id="sliderImage" src="./images/engine-desktop.jpg" alt="Engine" class="slider-image" />
+<body>
+  <div class="slider-section container-fluid">
+    <div id="slider-design" class="slider-panel show">
+      <img src="./images/Design.jpg" alt="Design" class="slider-image" />
+      <div class="bottom-section container-fluid">
+        <h2 class="mb-0">Discover all the insights.</h2>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-1</a></button>
+      </div>
+    </div>
+
+    <div id="slider-engine" class="slider-panel">
+      <img src="./images/engine-desktop.jpg" alt="Engine" class="slider-image" />
+      <div class="bottom-section container-fluid">
+        <h2 class="mb-0">Discover all the insights.</h2>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-2</a></button>
+      </div>
+    </div>
+
+    <div id="slider-vehicle" class="slider-panel">
+      <img src="./images/vechicle.jpg" alt="Vehicle" class="slider-image" />
+      <div class="bottom-section container-fluid">
+        <h2 class="mb-0">Discover all the insights.</h2>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-3</a></button>
+      </div>
+    </div>
+
+    <div id="slider-electronics" class="slider-panel">
+      <img src="./images/electronics.jpg" alt="Electronics" class="slider-image" />
+      <div class="bottom-section container-fluid">
+        <h2 class="mb-0">Discover all the insights.</h2>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-4</a></button>
+      </div>
+    </div>
+
+    <div id="slider-tech" class="slider-panel">
+      <img src="./images/Tech-spec.jpg" alt="Tech-Spec" class="slider-image" />
+      <div class="bottom-section container-fluid">
+        <h2 class="mb-0">Discover all the insights.</h2>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-5</a></button>
+      </div>
+    </div>
+
+    <div id="slider-customisation" class="slider-panel">
+      <img src="./images/customisation.jpg" alt="Customisation" class="slider-image" />
+      <div class="bottom-section container-fluid">
+        <h2 class="mb-0">Discover all the insights.</h2>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-6</a></button>
+      </div>
+    </div>
   </div>
 
+
+  <!-- Navigation Arrows -->
+
+<div class="slider-bar-buttons">
+  <a id="prevBtn" class="position-absolute arrow-left"><img src="./images/left-side.png" style="cursor: pointer;" alt=""></a>
+  <a id="nextBtn" class="position-absolute arrow-right"><img src="./images/right-side.png" style="cursor: pointer" alt=""></a>
+</div>
+
+
+  
+  <!-- Tabs -->
   <ul class="nav nav-tabs mt-4" id="sliderTabs" role="tablist">
-    <li class="nav-item"><button class="nav-link" data-title="Design" data-img="your_design_image.jpg">DESIGN</button></li>
-    <li class="nav-item"><button class="nav-link active" data-title="Engine" data-img="6c9f2287-fdd5-419b-bf2c-3691ebeda07e.png">ENGINE</button></li>
-    <li class="nav-item"><button class="nav-link" data-title="Vehicle" data-img="your_vehicle_image.jpg">VEHICLE</button></li>
-    <li class="nav-item"><button class="nav-link" data-title="Electronics" data-img="your_electronics_image.jpg">ELECTRONICS</button></li>
-    <li class="nav-item"><button class="nav-link" data-title="Tech Spec" data-img="your_techspec_image.jpg">TECH SPEC</button></li>
-    <li class="nav-item"><button class="nav-link" data-title="Customisation" data-img="your_customisation_image.jpg">CUSTOMISATION</button></li>
+    <li class="nav-item"><button class="nav-link active" data-target="slider-design">DESIGN</button></li>
+    <li class="nav-item"><button class="nav-link" data-target="slider-engine">ENGINE</button></li>
+    <li class="nav-item"><button class="nav-link" data-target="slider-vehicle">VEHICLE</button></li>
+    <li class="nav-item"><button class="nav-link" data-target="slider-electronics">ELECTRONICS</button></li>
+    <li class="nav-item"><button class="nav-link" data-target="slider-tech">TECH SPEC</button></li>
+    <li class="nav-item"><button class="nav-link" data-target="slider-customisation">CUSTOMISATION</button></li>
   </ul>
-</div>
 
-<div class="bottom-section container-fluid">
-  <h2 class="mb-0">Discover all the insights.</h2>
-  <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE</a></button>
-</div>
+  <script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  const tabs = document.querySelectorAll("#sliderTabs .nav-link");
-  const title = document.getElementById("sliderTitle");
-  const image = document.getElementById("sliderImage");
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", function () {
+    function showPanel(index) {
       tabs.forEach(t => t.classList.remove("active"));
-      this.classList.add("active");
+      panels.forEach(p => p.classList.remove("show"));
 
-      title.textContent = this.dataset.title;
-      image.src = this.dataset.img;
-      image.alt = this.dataset.title;
+      tabs[index].classList.add("active");
+      panels[index].classList.add("show");
+      currentIndex = index;
+
+      // Completely hide or show arrows
+      prevBtn.style.display = currentIndex === 0 ? "none" : "block";
+      nextBtn.style.display = currentIndex === panels.length - 1 ? "none" : "block";
+    }
+
+
+    const tabs = document.querySelectorAll("#sliderTabs .nav-link");
+    const panels = document.querySelectorAll(".slider-panel");
+
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let currentIndex = 0;
+
+    function showPanel(index) {
+      tabs.forEach(t => t.classList.remove("active"));
+      panels.forEach(p => p.classList.remove("show"));
+
+      tabs[index].classList.add("active");
+      panels[index].classList.add("show");
+      currentIndex = index;
+
+      // Disable arrows if on first or last panel
+      prevBtn.style.display = currentIndex === 0 ? "none" : "block";
+      nextBtn.style.display = currentIndex === panels.length - 1 ? "none" : "block";
+
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        showPanel(index);
+      });
     });
-  });
-</script>
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        showPanel(currentIndex - 1);
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex < panels.length - 1) {
+        showPanel(currentIndex + 1);
+      }
+    });
+
+    showPanel(currentIndex); // Init
+  </script>
+
 
 </body>
+
 </html>

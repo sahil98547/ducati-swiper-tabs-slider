@@ -1,3 +1,29 @@
+.slider-panel {
+    display: none;
+    position: relative;
+}
+
+.slider-panel.show {
+    display: block;
+}
+
+.slider-bar-buttons {
+   position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+}
+
+
+.arrow-left {
+    left: 20px;
+}
+
+.arrow-right {
+    right: 20px;
+}
+
+
 .slider-section {
     color: #fff;
     text-align: center;
@@ -18,12 +44,10 @@
     justify-content: start;
     border-bottom: 0;
     position: absolute;
-    bottom: 0;
+    bottom: 31%;
     gap: 25px;
     margin-left: 7%;
 }
-
-/* .nav-link:active, .nav-link:link, .nav-link:visited, .nav-link:focus */
 
 .nav-tabs .nav-link {
     border: none;
