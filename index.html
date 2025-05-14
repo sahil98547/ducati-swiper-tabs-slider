@@ -13,132 +13,198 @@
 <body>
   <div class="slider-section container-fluid">
     <div id="slider-design" class="slider-panel show">
-      <img src="./images/Design.jpg" alt="Design" class="slider-image" />
+
+      <!-- Desgin -->
+      <picture class="slider-image">
+        <!-- Desktop first -->
+        <source srcset="./images/Design.jpg" media="(min-width: 1100px)" />
+        <!-- iPad / Tablet -->
+        <source srcset="./images/Design_ipad.jpg" media="(min-width: 740px)" />
+        <!-- Mobile -->
+        <source srcset="./images/Design_mobile.jpg" media="(max-width: 739px)" />
+        <!-- Fallback image -->
+        <img src="./images/Design.jpg" alt="Design" class="img-fluid" />
+      </picture>
+
+      <div class="bottom-section container-fluid">
+        <h2 class="mb-0">Discover all the insights.</h2>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE</a></button>
+      </div>
+    </div>
+
+
+
+    <div id="slider-engine" class="slider-panel show">
+
+      <picture class="slider-image">
+        <!-- Desktop first -->
+        <source srcset="./images/Tech-Spec.jpg" media="(min-width: 1100px)" />
+        <!-- iPad / Tablet -->
+        <source srcset="./images/tech-spec-pad.jpg" media="(min-width: 740px)" />
+        <!-- Mobile -->
+        <source srcset="./images/tech-spec-mobile" media="(max-width: 739px)" />
+        <!-- Fallback image -->
+        <img src="./images/Design.jpg" alt="Design" class="img-fluid" />
+      </picture>
+
       <div class="bottom-section container-fluid">
         <h2 class="mb-0">Discover all the insights.</h2>
         <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-1</a></button>
       </div>
     </div>
 
-    <div id="slider-engine" class="slider-panel">
-      <img src="./images/engine-desktop.jpg" alt="Engine" class="slider-image" />
+    <!-- Vechile -->
+    <div id="slider-vehicle" class="slider-panel show">
+      <picture class="slider-image">
+        <!-- Desktop first -->
+        <source srcset="./images/vechicle.jpg" media="(min-width: 1100px)" />
+        <!-- iPad / Tablet -->
+        <source srcset="./images/Vechile_pad.jpg" media="(min-width: 740px)" />
+        <!-- Mobile -->
+        <source srcset="./images/Vechile_mobile.jpg" media="(max-width: 739px)" />
+        <!-- Fallback image -->
+        <img src="./images/Design.jpg" alt="Design" class="img-fluid" />
+      </picture>
+
       <div class="bottom-section container-fluid">
         <h2 class="mb-0">Discover all the insights.</h2>
-        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-2</a></button>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE</a></button>
       </div>
     </div>
 
-    <div id="slider-vehicle" class="slider-panel">
-      <img src="./images/vechicle.jpg" alt="Vehicle" class="slider-image" />
+
+    <div id="slider-electronics" class="slider-panel show">
+      <picture class="slider-image">
+        <!-- Desktop first -->
+        <source srcset="./images/Design.jpg" media="(min-width: 1100px)" />
+        <!-- iPad / Tablet -->
+        <source srcset="./images/Design_ipad.jpg" media="(min-width: 740px)" />
+        <!-- Mobile -->
+        <source srcset="./images/Design_mobile.jpg" media="(max-width: 739px)" />
+        <!-- Fallback image -->
+        <img src="./images/Design.jpg" alt="Design" class="img-fluid" />
+      </picture>
+
       <div class="bottom-section container-fluid">
         <h2 class="mb-0">Discover all the insights.</h2>
-        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-3</a></button>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-1</a></button>
       </div>
     </div>
 
-    <div id="slider-electronics" class="slider-panel">
-      <img src="./images/electronics.jpg" alt="Electronics" class="slider-image" />
+
+    <!-- Tech-Spec -->
+    <div id="slider-tech" class="slider-panel show">
+
+      <picture class="slider-image">
+        <source srcset="./images/Tech-Spec.jpg" media="(min-width: 1100px)" />
+        <source srcset="./images/tech-spec-pad.jpgS" media="(min-width: 740px)" />
+        <source srcset="./images/tech-spec-mobile" media="(max-width: 739px)" />
+        <img src="./images/Design.jpg" alt="Design" class="img-fluid" />
+      </picture>
+
       <div class="bottom-section container-fluid">
         <h2 class="mb-0">Discover all the insights.</h2>
-        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-4</a></button>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-1</a></button>
       </div>
     </div>
 
-    <div id="slider-tech" class="slider-panel">
-      <img src="./images/Tech-spec.jpg" alt="Tech-Spec" class="slider-image" />
+
+    <div id="slider-customisation" class="slider-panel show">
+
+      <!-- Desgin -->
+      <picture class="slider-image">
+        <source srcset="./images/Design.jpg" media="(min-width: 1100px)" />
+        <source srcset="./images/Design_ipad.jpg" media="(min-width: 740px)" />
+        <source srcset="./images/Design_mobile.jpg" media="(max-width: 739px)" />
+        <img src="./images/Design.jpg" alt="Design" class="img-fluid" />
+      </picture>
+
       <div class="bottom-section container-fluid">
         <h2 class="mb-0">Discover all the insights.</h2>
-        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-5</a></button>
+        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE</a></button>
       </div>
     </div>
 
-    <div id="slider-customisation" class="slider-panel">
-      <img src="./images/customisation.jpg" alt="Customisation" class="slider-image" />
-      <div class="bottom-section container-fluid">
-        <h2 class="mb-0">Discover all the insights.</h2>
-        <button class="explore-btn"><a class="ducati-epl-btn" href="">EXPLORE-6</a></button>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Navigation Arrows -->
-
-<div class="slider-bar-buttons">
-  <a id="prevBtn" class="position-absolute arrow-left"><img src="./images/left-side.png" style="cursor: pointer;" alt=""></a>
-  <a id="nextBtn" class="position-absolute arrow-right"><img src="./images/right-side.png" style="cursor: pointer" alt=""></a>
 </div>
 
 
-  
-  <!-- Tabs -->
-  <ul class="nav nav-tabs mt-4" id="sliderTabs" role="tablist">
-    <li class="nav-item"><button class="nav-link active" data-target="slider-design">DESIGN</button></li>
-    <li class="nav-item"><button class="nav-link" data-target="slider-engine">ENGINE</button></li>
-    <li class="nav-item"><button class="nav-link" data-target="slider-vehicle">VEHICLE</button></li>
-    <li class="nav-item"><button class="nav-link" data-target="slider-electronics">ELECTRONICS</button></li>
-    <li class="nav-item"><button class="nav-link" data-target="slider-tech">TECH SPEC</button></li>
-    <li class="nav-item"><button class="nav-link" data-target="slider-customisation">CUSTOMISATION</button></li>
-  </ul>
+    <!-- Navigation Arrows -->
 
-  <script>
-
-    function showPanel(index) {
-      tabs.forEach(t => t.classList.remove("active"));
-      panels.forEach(p => p.classList.remove("show"));
-
-      tabs[index].classList.add("active");
-      panels[index].classList.add("show");
-      currentIndex = index;
-
-      // Completely hide or show arrows
-      prevBtn.style.display = currentIndex === 0 ? "none" : "block";
-      nextBtn.style.display = currentIndex === panels.length - 1 ? "none" : "block";
-    }
+    <div class="slider-bar-buttons">
+      <a id="prevBtn" class="position-absolute arrow-left"><img src="./images/left-side.png" style="cursor: pointer;"
+          alt=""></a>
+      <a id="nextBtn" class="position-absolute arrow-right"><img src="./images/right-side.png" style="cursor: pointer"
+          alt=""></a>
+    </div>
 
 
-    const tabs = document.querySelectorAll("#sliderTabs .nav-link");
-    const panels = document.querySelectorAll(".slider-panel");
+    <ul class="nav nav-tabs mt-4 d-flex flex-wrap justify-content-start" id="sliderTabs" role="tablist">
+      <li class="nav-item"><button class="nav-link active" data-target="slider-design">DESIGN</button></li>
+      <li class="nav-item"><button class="nav-link" data-target="slider-engine">ENGINE</button></li>
+      <li class="nav-item"><button class="nav-link" data-target="slider-vehicle">VEHICLE</button></li>
+      <li class="nav-item"><button class="nav-link" data-target="slider-electronics">ELECTRONICS</button></li>
+      <li class="nav-item"><button class="nav-link" data-target="slider-tech">TECH SPEC</button></li>
+      <li class="nav-item"><button class="nav-link" data-target="slider-customisation">CUSTOMISATION</button></li>
+    </ul>
 
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
 
-    let currentIndex = 0;
+    <script>
 
-    function showPanel(index) {
-      tabs.forEach(t => t.classList.remove("active"));
-      panels.forEach(p => p.classList.remove("show"));
+      function showPanel(index) {
+        tabs.forEach(t => t.classList.remove("active"));
+        panels.forEach(p => p.classList.remove("show"));
 
-      tabs[index].classList.add("active");
-      panels[index].classList.add("show");
-      currentIndex = index;
+        tabs[index].classList.add("active");
+        panels[index].classList.add("show");
+        currentIndex = index;
 
-      // Disable arrows if on first or last panel
-      prevBtn.style.display = currentIndex === 0 ? "none" : "block";
-      nextBtn.style.display = currentIndex === panels.length - 1 ? "none" : "block";
+        // Completely hide or show arrows
+        prevBtn.style.display = currentIndex === 0 ? "none" : "block";
+        nextBtn.style.display = currentIndex === panels.length - 1 ? "none" : "block";
+      }
 
-    }
+      const tabs = document.querySelectorAll("#sliderTabs .nav-link");
+      const panels = document.querySelectorAll(".slider-panel");
 
-    tabs.forEach((tab, index) => {
-      tab.addEventListener("click", () => {
-        showPanel(index);
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let currentIndex = 0;
+
+      function showPanel(index) {
+        tabs.forEach(t => t.classList.remove("active"));
+        panels.forEach(p => p.classList.remove("show"));
+
+        tabs[index].classList.add("active");
+        panels[index].classList.add("show");
+        currentIndex = index;
+
+        // Disable arrows if on first or last panel
+        prevBtn.style.display = currentIndex === 0 ? "none" : "block";
+        nextBtn.style.display = currentIndex === panels.length - 1 ? "none" : "block";
+
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+          showPanel(index);
+        });
       });
-    });
 
-    prevBtn.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        showPanel(currentIndex - 1);
-      }
-    });
+      prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          showPanel(currentIndex - 1);
+        }
+      });
 
-    nextBtn.addEventListener("click", () => {
-      if (currentIndex < panels.length - 1) {
-        showPanel(currentIndex + 1);
-      }
-    });
+      nextBtn.addEventListener("click", () => {
+        if (currentIndex < panels.length - 1) {
+          showPanel(currentIndex + 1);
+        }
+      });
 
-    showPanel(currentIndex); // Init
-  </script>
+      showPanel(currentIndex); // Init
+    </script>
 
 
 </body>
