@@ -71,6 +71,8 @@ body {
     background: transparent !important;
     border-bottom: 5px solid red !important;
     color: #fff !important;
+    z-index: 2;
+    position: relative;
 }
 
 .content-title {
@@ -103,10 +105,11 @@ body {
 }
 
 
-.bottom-section::after {
+picture::after{
+    z-index: 2;
     content: '';
     display: block;
-    bottom: 0;
+    bottom: 17%;
     left: 0;
     width: 100%;
     height: 64px;
@@ -115,7 +118,13 @@ body {
     position: absolute;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    pointer-events: none;
 }
+
+.tab-container{
+    z-index: 100;
+}
+
 
 /* Ipad css  */
 
@@ -153,7 +162,7 @@ body {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: nowrap;
-        overflow-x: scroll;
+        overflow-x: hidden;
         overflow-y: hidden;
         margin-left: 0px;
         gap: 0px;
@@ -166,6 +175,14 @@ body {
 
     .bottom-section {
         align-items: start !important;
+    }
+
+    picture::after{
+        bottom: 26%;
+    }
+
+    .button.explore-btn.mt-2.mt-md-0{
+        width: 200px;
     }
 
 
