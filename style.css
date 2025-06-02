@@ -97,6 +97,7 @@ body {
     color: #fff;
     font-weight: bold;
     padding: 0.75rem 2rem;
+    width: 200px;
 }
 
 .ducati-epl-btn {
@@ -124,7 +125,6 @@ picture::after{
 .tab-container{
     z-index: 100;
 }
-
 
 /* Ipad css  */
 
@@ -180,11 +180,5 @@ picture::after{
     picture::after{
         bottom: 26%;
     }
-
-    .button.explore-btn.mt-2.mt-md-0{
-        width: 200px;
-    }
-
-
 
 }
