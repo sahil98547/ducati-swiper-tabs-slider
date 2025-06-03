@@ -13,7 +13,6 @@
 <body>
   <div class="slider-section container-fluid">
     <div id="slider-design" class="slider-panel show">
-
       <!-- Desgin -->
       <picture class="slider-image">
         <!-- Desktop first -->
@@ -24,20 +23,20 @@
         <source srcset="./images/Design_mobile.jpg" media="(max-width: 739px)" />
         <!-- Fallback image -->
         <img src="./images/Design.jpg" alt="Design" class="img-fluid" />
-      </picture>
+      </picture> 
 
       <div
         class="bottom-section container-fluid d-flex flex-md-row flex-column align-items-center justify-content-between">
         <h2 class="mb-2 mb-md-0 text-center text-md-start">Discover all the insights.</h2>
         <button class="explore-btn mt-2 mt-md-0">
-          <a class="ducati-epl-btn" href="">EXPLORE</a> 
+          <a class="ducati-epl-btn" href="">EXPLORE</a>
         </button>
       </div>
     </div>
 
 
     <div id="slider-engine" class="slider-panel show">
-    
+
       <picture class="slider-image">
         <!-- Desktop first -->
         <source srcset="./images/Tech-Spec.jpg" media="(min-width: 1100px)" />
@@ -139,7 +138,7 @@
         <button class="explore-btn mt-2 mt-md-0">
           <a class="ducati-epl-btn" href="">EXPLORE</a>
         </button>
-      </div>  
+      </div>
 
     </div>
 
@@ -157,7 +156,7 @@
 
 
   <div class="tab-container">
-    <ul class="nav nav-tabs mt-4" id="sliderTabs" role="tablist">
+    <ul class="nav nav-tabs mt-4 d-flex" id="sliderTabs" role="tablist">
       <li class="nav-item"><button class="nav-link active" data-target="slider-design">DESIGN</button></li>
       <li class="nav-item"><button class="nav-link" data-target="slider-engine">ENGINE</button></li>
       <li class="nav-item"><button class="nav-link" data-target="slider-vehicle">VEHICLE</button></li>
@@ -167,22 +166,7 @@
     </ul>
   </div>
 
-
   <script>
-
-    function showPanel(index) {
-      tabs.forEach(t => t.classList.remove("active"));
-      panels.forEach(p => p.classList.remove("show"));
-
-      tabs[index].classList.add("active");
-      panels[index].classList.add("show");
-      currentIndex = index;
-
-      // Completely hide or show arrows
-      prevBtn.style.display = currentIndex === 0 ? "none" : "block";
-      nextBtn.style.display = currentIndex === panels.length - 1 ? "none" : "block";
-    }
-
     const tabs = document.querySelectorAll("#sliderTabs .nav-link");
     const panels = document.querySelectorAll(".slider-panel");
 
@@ -199,10 +183,11 @@
       panels[index].classList.add("show");
       currentIndex = index;
 
-      // Disable arrows if on first or last panel
+      // Hide arrows at the ends
       prevBtn.style.display = currentIndex === 0 ? "none" : "block";
       nextBtn.style.display = currentIndex === panels.length - 1 ? "none" : "block";
 
+      tabs[index].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
     }
 
     tabs.forEach((tab, index) => {
@@ -223,9 +208,9 @@
       }
     });
 
-    showPanel(currentIndex); // Init
+    // Initialize first panel
+    showPanel(currentIndex);
   </script>
-
 
 </body>
 
